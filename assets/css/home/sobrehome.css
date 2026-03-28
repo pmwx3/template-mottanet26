@@ -1,0 +1,232 @@
+/* ===================================
+   SEÇÃO PQ MOTTANET — RESPONSIVO
+=================================== */
+
+.pq_mottanet {
+  background-color: #020b1a;
+  background-image:
+    radial-gradient(ellipse 60% 50% at 70% 40%,
+      rgba(17, 82, 168, 0.35) 0%,
+      transparent 70%),
+    radial-gradient(ellipse 40% 60% at 10% 80%,
+      rgba(0, 212, 255, 0.12) 0%,
+      transparent 60%),
+    url("../../img/mapa-rede-mottanet.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  /* 100vh respeitado — mas não força conteúdo a vazar */
+  min-height: 100vh;
+  min-height: 100svh;
+  /* suporte a mobile (safe viewport height) */
+  display: flex;
+  align-items: center;
+  padding: 60px 0;
+  /* espaço vertical no mobile */
+  color: var(--lightGray);
+  box-sizing: border-box;
+}
+
+/* --- Info text --- */
+.pq_mottanet_info {
+  max-width: 100%;
+  /* removido o 80% que comprimia no mobile */
+  line-height: 1.6;
+}
+
+.pq_mottanet_info b {
+  color: var(--primary-color);
+}
+
+/* --- Header --- */
+.pq_mottanet_header h1 {
+  color: var(--primary-color);
+  font-size: 2.8rem;
+  font-weight: bold;
+}
+
+.pq_mottanet_header h2 {
+  font-size: 1rem;
+}
+
+/* --- Botão --- */
+.btn_read_more {
+  display: inline-block;
+  margin-top: 20px;
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.btn_read_more:hover {
+  color: var(--primary-color);
+}
+
+/* --- Grid de Stats --- */
+.pq_mottanet_grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.stat_card {
+  background-color: rgba(4, 71, 143, 0.44);
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(1, 11, 97, 0.2);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.stat_card:hover {
+  background-color: #f7922d;
+  transform: translateY(-8px);
+  box-shadow: 0 10px 20px rgba(247, 146, 45, 0.4);
+}
+
+.stat_card.full_width {
+  grid-column: span 2;
+}
+
+.stat_card h3 {
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.stat_card h3 span {
+  font-size: 0.95rem;
+  font-weight: 300;
+  display: block;
+  opacity: 0.9;
+}
+
+/* --- CDN Tags --- */
+.cdn_tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.cdn_tags span {
+  background-color: var(--primary-color);
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+/* ===================================
+   TABLET (≤ 992px)
+=================================== */
+@media (max-width: 992px) {
+  .pq_mottanet_header h1 {
+    font-size: 2.2rem;
+  }
+
+  .stat_card h3 {
+    font-size: 1.3rem;
+  }
+}
+
+/* ===================================
+   MOBILE (≤ 768px)
+=================================== */
+@media (max-width: 768px) {
+  .pq_mottanet {
+    padding: 48px 0;
+    align-items: flex-start;
+    /* evita esticar em telas pequenas */
+  }
+
+  /* Inverte a ordem: header + stats primeiro, info depois */
+  .pq_mottanet .row {
+    flex-direction: column-reverse;
+  }
+
+  .pq_mottanet_header {
+    margin-bottom: 16px;
+  }
+
+  .pq_mottanet_header h1 {
+    font-size: 1.9rem;
+  }
+
+  .pq_mottanet_header h2 {
+    font-size: 0.9rem;
+  }
+
+  .pq_mottanet_info {
+    max-width: 100%;
+    margin-top: 8px;
+  }
+
+  /* Grid 2 colunas ainda funciona bem em tablet/mobile grande */
+  .pq_mottanet_grid {
+    gap: 12px;
+  }
+
+  .stat_card {
+    padding: 16px;
+  }
+
+  .stat_card h3 {
+    font-size: 1.15rem;
+  }
+
+  .stat_card h3 span {
+    font-size: 0.8rem;
+  }
+}
+
+/* ===================================
+   MOBILE PEQUENO (≤ 480px)
+=================================== */
+@media (max-width: 480px) {
+  .pq_mottanet {
+    padding: 36px 0;
+    align-items: center;
+  }
+
+  .pq_mottanet_header h1 {
+    font-size: 1.6rem;
+  }
+
+  /* Info aparece, mas compacta — NÃO some mais */
+  .pq_mottanet_info {
+    font-size: 0.875rem;
+    padding-top: 25px;
+  }
+
+  /* Grid 2 colunas mantido — melhor aproveitamento de espaço */
+  .pq_mottanet_grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  .stat_card {
+    padding: 12px;
+  }
+
+  .stat_card h3 {
+    font-size: 1rem;
+  }
+
+  .stat_card h3 span {
+    font-size: 0.72rem;
+  }
+}
+
+/* ===================================
+   MOBILE MUITO PEQUENO (≤ 360px)
+=================================== */
+@media (max-width: 360px) {
+  .pq_mottanet_grid {
+    grid-template-columns: 1fr;
+  }
+
+  .stat_card.full_width {
+    grid-column: span 1;
+  }
+}

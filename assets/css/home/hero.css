@@ -1,0 +1,80 @@
+.video {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.video video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+/* 1. Ajuste do Container dos Botões */
+.btn-video {
+  position: absolute;
+  bottom: 110px;
+  /* Conforme solicitado */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+
+  display: flex;
+  gap: 12px;
+  /* Espaçamento entre eles */
+  width: 90%;
+  /* Garante que não batam na borda da tela */
+  max-width: 400px;
+  /* Não deixa os botões ficarem gigantes em telas maiores */
+  justify-content: center;
+}
+
+@media(max-width: 480px) {
+  .btn-video {
+    bottom: 50px;
+  }
+}
+
+/* 2. Ajuste Base para os dois Botões */
+.btn-primary,
+.btn-secondary {
+  flex: 1;
+  /* Faz os dois botões terem exatamente o mesmo tamanho */
+  text-align: center;
+  padding: 14px 10px;
+  /* Aumenta a área de clique */
+  font-size: 14px;
+  /* Tamanho de fonte legível no mobile */
+  white-space: nowrap;
+  /* Impede que o texto quebre em duas linhas */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  /* Bordas um pouco mais modernas */
+  text-decoration: none;
+  font-family: sans-serif;
+  transition: all 0.3s ease;
+}
+
+/* 3. Media Query para telas muito pequenas (ex: iPhone SE) */
+@media (max-width: 360px) {
+  .btn-video {
+    flex-direction: column;
+    /* Empilha os botões se a tela for muito estreita */
+    bottom: 20px;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    width: 100%;
+  }
+}
+
+/* --- Seus estilos de animação e cores permanecem abaixo --- */
+/* (Mantenha o código de @keyframes e :hover que você já tem) */

@@ -1,0 +1,356 @@
+/* ===================================
+   MOTTAVISION — PLANOS
+=================================== */
+
+.main_card_planos4 {
+  background-color: #201b16;
+  background-image: url("../../img/camera.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  min-height: 100vh;
+  min-height: 100svh;
+  min-height: 100dvh;
+
+  color: #fff;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+
+  padding: 64px 0;
+  box-sizing: border-box;
+}
+
+.main_card_planos4>.container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mySwiperPlanosMV .swiper-wrapper {
+  margin-top: 20px;
+  align-items: stretch;
+}
+
+.fw-black {
+  font-weight: 900;
+  letter-spacing: -1px;
+}
+
+/* --- Cards --- */
+.card-vision {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.07);
+
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+
+  color: #d1d1d1;
+  position: relative;
+}
+
+.card-vision.featured {
+  background: rgba(247, 146, 45, 0.08);
+  border: 2px solid var(--primary-color);
+}
+
+/* --- Tipografia --- */
+.plan-label {
+  font-size: 0.7rem;
+  letter-spacing: 2px;
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+.price-box .amount {
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.price-box .currency,
+.price-box .cents {
+  font-size: 1rem;
+  opacity: 0.8;
+}
+
+.price-box .sub-price {
+  font-size: 0.75rem;
+  opacity: 0.45;
+  margin-top: 4px;
+}
+
+.card-vision ul li {
+  margin-bottom: 12px;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+}
+
+.card-vision ul li i {
+  margin-right: 10px;
+  color: var(--primary-color);
+  flex-shrink: 0;
+}
+
+/* --- Badges --- */
+.badge-featured,
+.badge-secondary-custom {
+  position: absolute;
+  top: -13px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 5px 20px;
+  border-radius: 50px;
+  font-size: 0.7rem;
+  font-weight: bold;
+  white-space: nowrap;
+  z-index: 5;
+}
+
+.badge-featured {
+  background: var(--primary-color);
+  color: #000;
+}
+
+.badge-secondary-custom {
+  background: #333;
+  color: #fff;
+  border: 1px solid #444;
+}
+
+/* --- Botões --- */
+.btn-vision-outline {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #fff;
+  border-radius: 12px;
+  padding: 12px;
+  transition: 0.3s;
+  font-size: 0.9rem;
+}
+
+.btn-vision-outline:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--primary-color);
+}
+
+.bg-dark-soft {
+  background: rgba(0, 0, 0, 0.25) !important;
+}
+
+/* --- Paginação --- */
+.swiper-pagination-bullet {
+  background: rgba(255, 255, 255, 0.3) !important;
+  opacity: 1 !important;
+}
+
+.swiper-pagination-bullet-active {
+  background: var(--primary-color) !important;
+}
+
+/* ===================================
+   DESKTOP GRANDE
+=================================== */
+@media (min-width: 1440px) {
+  .card-vision.featured {
+    transform: scale(1.04);
+    z-index: 2;
+  }
+
+  .card-vision.featured:hover {
+    transform: scale(1.06) translateY(-6px);
+  }
+
+  .card-vision:not(.featured):hover {
+    transform: translateY(-6px);
+    background: rgba(255, 255, 255, 0.06);
+  }
+}
+
+/* ===================================
+   DESKTOP MÉDIO
+=================================== */
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .main_card_planos4 {
+    padding: 52px 0;
+  }
+
+  .card-vision.featured {
+    transform: scale(1);
+  }
+
+  .price-box .amount {
+    font-size: 2.4rem;
+  }
+
+  .card-vision .card-body {
+    padding: 1.25rem !important;
+  }
+}
+
+/* ===================================
+   DESKTOP BAIXO (ALTURA)
+=================================== */
+@media (min-width: 1024px) and (max-height: 800px) {
+  .main_card_planos4 {
+    padding: 32px 0;
+  }
+
+  .display-5 {
+    font-size: 1.6rem !important;
+  }
+
+  .lead {
+    font-size: 0.82rem !important;
+  }
+
+  .price-box .amount {
+    font-size: 1.8rem;
+  }
+
+  .card-vision ul li {
+    font-size: 0.78rem;
+    margin-bottom: 5px;
+  }
+}
+
+/* ===================================
+   TABLET
+=================================== */
+@media (max-width: 1023px) and (min-width: 768px) {
+  .main_card_planos4 {
+    padding: 56px 0;
+  }
+}
+
+/* ===================================
+   MOBILE PREMIUM
+=================================== */
+@media (max-width: 767px) {
+
+  .main_card_planos4 {
+    height: 100dvh;
+    padding: 20px 0;
+    overflow: hidden;
+    justify-content: space-between;
+  }
+
+  .display-5 {
+    font-size: 1.45rem !important;
+  }
+
+  .lead {
+    font-size: 0.82rem !important;
+  }
+
+  .mySwiperPlanosMV {
+    flex: 1;
+    display: flex;
+    align-items: center;
+  }
+
+  /* CARD */
+  .card-vision {
+    height: 78vh;
+
+    border-radius: 18px;
+
+    padding: 12px;
+
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(18px);
+
+    border: 1px solid rgba(255, 255, 255, 0.12);
+
+    box-shadow:
+      0 10px 30px rgba(0, 0, 0, 0.35),
+      inset 0 1px 0 rgba(255, 255, 255, 0.08);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .card-vision.featured {
+    background: linear-gradient(180deg,
+        rgba(247, 146, 45, 0.15),
+        rgba(247, 146, 45, 0.05));
+
+    border: 2px solid var(--primary-color);
+
+    box-shadow:
+      0 12px 35px rgba(247, 146, 45, 0.25);
+  }
+
+  .card-vision:active {
+    transform: scale(0.98);
+  }
+
+  .price-box .amount {
+    font-size: 2.2rem;
+  }
+
+  /* LISTA COM FADE */
+  .card-vision ul {
+    position: relative;
+    max-height: 140px;
+    overflow: hidden;
+  }
+
+  .card-vision ul::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 30px;
+
+    background: linear-gradient(to bottom,
+        rgba(32, 27, 22, 0),
+        rgba(32, 27, 22, 0.95));
+  }
+
+  .card-vision ul li {
+    font-size: 0.8rem;
+    margin-bottom: 6px;
+  }
+
+  .btn-vision-outline,
+  .btn-primary-custom {
+    font-size: 0.82rem;
+    padding: 11px;
+    border-radius: 10px;
+  }
+
+  .badge-featured,
+  .badge-secondary-custom {
+    font-size: 0.65rem;
+    padding: 5px 16px;
+    top: -12px;
+  }
+}
+
+/* ===================================
+   MOBILE PEQUENO
+=================================== */
+@media (max-width: 480px) {
+
+  .card-vision {
+    height: 75vh;
+  }
+
+  .price-box .amount {
+    font-size: 2rem;
+  }
+
+  .card-vision ul {
+    max-height: 120px;
+  }
+
+}

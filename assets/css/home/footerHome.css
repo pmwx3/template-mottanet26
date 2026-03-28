@@ -1,0 +1,296 @@
+/* ==========================================================================
+   FOOTER MOTTANET - TECH & MODERN STYLE (UTILIZANDO VARIÁVEIS EXISTENTES)
+   ========================================================================== */
+
+.site-footer {
+    /* Gradiente Tech: do seu azul secundário para um tom mais profundo */
+    background: linear-gradient(135deg, var(--secondary-color) 0%, #010f1f 100%);
+    color: #ffffff;
+
+    /* Controle de Altura 100vh com correção para mobile */
+    min-height: 100vh;
+    min-height: calc(var(--vh, 1vh) * 100);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 60px 5% 30px;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+
+    /* Performance */
+    contain: content;
+}
+
+.site-footer>.filial {
+    /* Gradiente Tech: do seu azul secundário para um tom mais profundo */
+    background: linear-gradient(135deg, var(--secondary-color) 0%, #010f1f 100%);
+    color: #ffffff;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 60px 5% 30px;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+
+    /* Performance */
+    contain: content;
+}
+
+.footer-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* --- BRANDING & SEO --- */
+
+.footer-brand-section {
+    max-width: 800px;
+    margin-bottom: 30px;
+}
+
+.footer-logo {
+    display: block;
+    max-width: 220px;
+    height: auto;
+    margin-bottom: 25px;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+    transition: transform 0.3s ease;
+}
+
+.footer-logo:hover {
+    transform: scale(1.02);
+}
+
+.brand-seo-text p {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 20px;
+}
+
+.brand-seo-text strong {
+    color: #ffffff;
+    font-weight: 600;
+}
+
+/* Badge de Suporte 24h usando sua cor primária (#f7922d) */
+.support-badge {
+    display: inline-flex;
+    align-items: center;
+    background: rgba(247, 146, 45, 0.1);
+    border: 1px solid var(--primary-color);
+    padding: 10px 18px;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.pulse-icon {
+    width: 10px;
+    height: 10px;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    margin-right: 12px;
+    position: relative;
+    box-shadow: 0 0 0 rgba(247, 146, 45, 0.4);
+    animation: pulse-animation 2s infinite;
+}
+
+@keyframes pulse-animation {
+    0% {
+        box-shadow: 0 0 0 0 rgba(247, 146, 45, 0.7);
+    }
+
+    70% {
+        box-shadow: 0 0 0 12px rgba(247, 146, 45, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(247, 146, 45, 0);
+    }
+}
+
+/* --- GRID DE NAVEGAÇÃO --- */
+
+.footer-divider {
+    border: 0;
+    height: 1px;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.15), transparent);
+    margin: 40px 0;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 40px;
+    margin-bottom: 50px;
+}
+
+.footer-column h3 {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 25px;
+    color: var(--primary-color);
+    /* Destaque nos títulos */
+    font-weight: 700;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 14px;
+}
+
+.footer-column ul li a {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.footer-column ul li a:hover {
+    color: #ffffff;
+    transform: translateX(6px);
+}
+
+/* Links de Contato */
+.contact-link {
+    font-size: 1.1rem !important;
+    color: #ffffff !important;
+    font-weight: 700 !important;
+}
+
+address.footer-column {
+    font-style: normal;
+}
+
+/* --- FOOTER BOTTOM --- */
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding-top: 30px;
+    text-align: center;
+}
+
+.copyright-info p {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.4);
+    margin: 0;
+}
+
+/* --- RESPONSIVIDADE (MOBILE) --- */
+
+@media (max-width: 992px) {
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .site-footer {
+        justify-content: flex-start;
+        padding-top: 50px;
+        min-height: auto;
+        /* Permite scroll natural se o conteúdo for longo */
+    }
+
+    .footer-brand-section {
+        text-align: left;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .brand-seo-text p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .support-badge {
+        flex-direction: row;
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+
+/* Estilos Padrão para Páginas Dinâmicas */
+.page-wrapper {
+    min-height: 100vh;
+}
+
+.breadcrumb-nav {
+    border-bottom: 1px solid #e9ecef;
+}
+
+.breadcrumb {
+    --bs-breadcrumb-divider: '>';
+    font-size: 0.95rem;
+}
+
+.page-header {
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 1.5rem;
+}
+
+.page-title {
+    color: #212529 !important;
+    line-height: 1.2;
+}
+
+.entry-content {
+    line-height: 1.7;
+}
+
+.entry-content p,
+.entry-content li {
+    color: #6c757d !important;
+    /* Equivale a rgb(68,68,68) - text-muted */
+    font-size: 1.1rem;
+}
+
+.entry-content h2,
+.entry-content h3 {
+    color: #212529 !important;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.entry-content ul,
+.entry-content ol {
+    padding-left: 1.5rem;
+}
+
+.entry-content a {
+    color: #007bff;
+    text-decoration: underline;
+}
+
+.entry-content a:hover {
+    color: #0056b3;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .page-title {
+        font-size: 2rem;
+    }
+}

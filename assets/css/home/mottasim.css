@@ -1,0 +1,227 @@
+/* ===================================
+   PLANOS MOTTASIM
+=================================== */
+
+.main_card_planos3 {
+  width: 100%;
+  overflow-x: hidden;
+  background-color: #190b00;
+  background-image:
+    radial-gradient(ellipse 60% 50% at 70% 40%,
+      rgba(247, 146, 45, 0.804) 0%,
+      transparent 75%),
+    radial-gradient(ellipse 40% 60% at 10% 80%,
+      rgba(255, 102, 0, 0.645) 0%,
+      transparent 65%),
+    url("../../img/ecosistema.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  min-height: 100svh;
+  color: var(--lightGray);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 0;
+  box-sizing: border-box;
+}
+
+/* --- Utilitários de cor --- */
+.text-primary-custom {
+  color: var(--primary-color) !important;
+}
+
+.bg-orange-hot {
+  background-color: var(--hot-orange) !important;
+}
+
+/* --- Glassmorphism --- */
+.card-glass {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: white;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.card-glass:hover {
+  background: rgba(255, 255, 255, 0.08);
+  transform: translateY(-5px);
+}
+
+.border-primary-custom {
+  border: 2px solid var(--primary-color) !important;
+}
+
+/* --- Botão --- */
+.btn-primary-custom {
+  background-color: var(--primary-color);
+  color: #000;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.btn-primary-custom:hover {
+  background-color: var(--hot-orange);
+  color: #fff;
+  transform: scale(1.02);
+}
+
+.shadow-glow {
+  box-shadow: 0 0 20px rgba(247, 146, 45, 0.4);
+}
+
+/* --- Ícones de benefício --- */
+.icon-box {
+  min-width: 45px;
+  height: 45px;
+  flex-shrink: 0;
+  background: rgba(247, 146, 45, 0.2);
+  color: var(--primary-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  font-size: 1.2rem;
+}
+
+/* ===================================
+   DESKTOP: scale-up no plano destaque
+=================================== */
+@media (min-width: 768px) {
+  .scale-up {
+    transform: scale(1.05);
+  }
+
+  .scale-up:hover {
+    transform: scale(1.08) translateY(-5px);
+  }
+}
+
+/* ===================================
+   TABLET (≤ 992px)
+=================================== */
+@media (max-width: 992px) {
+  .main_card_planos3 {
+    padding: 50px 0;
+    align-items: flex-start;
+  }
+}
+
+/* ===================================
+   MOBILE: Swiper ativado (< 768px)
+=================================== */
+@media (max-width: 767px) {
+  .main_card_planos3 {
+    padding: 44px 0;
+    align-items: flex-start;
+    background-image:
+      radial-gradient(ellipse 100% 40% at 50% 0%,
+        rgba(247, 146, 45, 0.55) 0%,
+        transparent 70%),
+      radial-gradient(ellipse 70% 30% at 50% 100%,
+        rgba(255, 102, 0, 0.35) 0%,
+        transparent 65%),
+      url("../../img/ecosistema.png");
+  }
+
+  .display-4 {
+    font-size: 1.8rem !important;
+  }
+
+  /* Swiper container */
+  .swiper-planos {
+    width: 100%;
+    padding: 20px 0 48px !important;
+    overflow: visible;
+  }
+
+  .swiper-planos .swiper-slide {
+    width: 85%;
+    height: auto;
+  }
+
+  .swiper-planos .swiper-slide .card {
+    height: 100%;
+  }
+
+  /* Badge "MAIS DADOS" corrigido dentro do slide */
+  .swiper-planos .translate-middle {
+    transform: translateX(-50%) !important;
+    top: -14px !important;
+  }
+
+  /* Paginação */
+  .swiper-pagination-bullet {
+    background: rgba(255, 255, 255, 0.3);
+    opacity: 1;
+  }
+
+  .swiper-pagination-bullet-active {
+    background: var(--primary-color);
+  }
+
+  /* Coluna de benefícios empilhada abaixo dos cards */
+  .main_card_planos3 .col-lg-4 {
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    padding-top: 28px !important;
+    margin-top: 8px;
+  }
+
+  .icon-box {
+    min-width: 38px;
+    height: 38px;
+    font-size: 1rem;
+  }
+
+  .benefit-item {
+    margin-bottom: 1rem !important;
+  }
+}
+
+/* ===================================
+   MOBILE PEQUENO (≤ 480px)
+=================================== */
+@media (max-width: 480px) {
+
+  .mtsim_inf {
+    display: none !important;
+  }
+
+  .display-4 {
+    font-size: 1.55rem !important;
+  }
+
+  .swiper-planos .swiper-slide {
+    width: 88%;
+  }
+
+  .card-glass .card-body {
+    padding: 1.25rem !important;
+  }
+
+  .card-glass h3.fw-bold {
+    font-size: 1.3rem;
+  }
+
+  .btn-primary-custom.py-3 {
+    padding-top: 0.6rem !important;
+    padding-bottom: 0.6rem !important;
+    font-size: 0.85rem;
+  }
+}
+
+/* ===================================
+   MOBILE MUITO PEQUENO (≤ 360px)
+=================================== */
+@media (max-width: 360px) {
+  .display-4 {
+    font-size: 1.4rem !important;
+  }
+
+  .swiper-planos .swiper-slide {
+    width: 92%;
+  }
+}

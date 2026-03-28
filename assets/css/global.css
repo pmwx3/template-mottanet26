@@ -1,0 +1,116 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&display=swap");
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css");
+
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+
+:root {
+  --primary-color: #f7922d;
+  --secondary-color: #04478f;
+  --gray: #808080;
+  --darkGray: #3c485e;
+  --lightGray: #f4f4f4;
+}
+
+/* BOTÃO */
+.btn-primary {
+  background-color: var(--primary-color);
+  border: none;
+  padding: 10px 20px;
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  outline: none;
+  animation: pulse-neon 2s infinite;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+@keyframes pulse-neon {
+  0% {
+    box-shadow:
+      0 0 5px var(--primary-color),
+      0 0 10px var(--primary-color);
+  }
+
+  50% {
+    box-shadow:
+      0 0 15px var(--primary-color),
+      0 0 15px var(--primary-color),
+      0 0 30px var(--primary-color);
+  }
+
+  100% {
+    box-shadow:
+      0 0 5px var(--primary-color),
+      0 0 10px var(--primary-color);
+  }
+}
+
+.btn-primary:hover {
+  transform: scale(1.05);
+  background-color: #ffaa4d;
+  animation: none;
+  box-shadow:
+    0 0 20px var(--primary-color),
+    0 0 40px var(--primary-color),
+    0 0 60px var(--primary-color);
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
+}
+
+.btn-primary:active {
+  transform: scale(0.68);
+}
+
+/* BOTÃO SECUNDÁRIO */
+.btn-secondary {
+  background-color: #04478f; /* Sua nova cor */
+  border: none;
+  padding: 10px 20px;
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  outline: none;
+  animation: pulse-neon-secondary 2s infinite; /* Nome da animação alterado */
+  transition: all 0.3s ease;
+  text-decoration: none; /* Caso use a tag <a> */
+  display: inline-block;
+}
+
+@keyframes pulse-neon-secondary {
+  0% {
+    box-shadow: 0 0 5px #04478f, 0 0 10px #04478f;
+  }
+  50% {
+    box-shadow: 0 0 15px #04478f, 0 0 15px #04478f, 0 0 30px #04478f;
+  }
+  100% {
+    box-shadow: 0 0 5px #04478f, 0 0 10px #04478f;
+  }
+}
+
+.btn-secondary:hover {
+  transform: scale(1.05);
+  background-color: #0559b3; /* Um tom levemente mais claro para o hover */
+  animation: none;
+  box-shadow:
+    0 0 20px #04478f,
+    0 0 40px #04478f,
+    0 0 60px #04478f;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
+}
+
+.btn-secondary:active {
+  transform: scale(0.68);
+}
+
+

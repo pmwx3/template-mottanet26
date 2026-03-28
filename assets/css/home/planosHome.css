@@ -1,0 +1,291 @@
+/* =============================================
+   SEÇÃO PLANOS — BASE (1920px, layout original)
+   ============================================= */
+.main_card_planos {
+  background-image: url("../../img/planosfibrafundo.png"),
+    linear-gradient(to right, #002E5D, #002E5D, #2774ae);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  color: var(--lightGray);
+}
+
+.main_card_planos header {
+  flex-basis: 25%;
+  flex-shrink: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 60px 40px;
+}
+
+.main_card_planos header h1,
+.main_card_planos header h2 {
+  color: white;
+  margin-bottom: 20px;
+}
+
+.main_card_planos header h1 {
+  font-size: 4.5rem;
+}
+
+.main_card_planos header h2 {
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+.cards_slide {
+  flex-basis: 75%;
+  width: 75%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+/* CARDS */
+.cards_slide .card {
+  border: none;
+  border-radius: 7px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  text-align: center;
+  background: #dde2e2;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px,
+    rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.cards_slide .card.mais_vendidos {
+  background: var(--secondary-color);
+}
+
+.cards_slide .card.mais_vendidos .card-title {
+  color: #fff;
+}
+
+.cards_slide .card.mais_vendidos .preco {
+  color: #fff;
+}
+
+.cards_slide .card.mais_vendidos .vemjunto h4 {
+  color: #fff;
+}
+
+.cards_slide .card .card-title {
+  font-size: 1rem;
+  font-weight: bold;
+  color: var(--secondary-color);
+}
+
+.cards_slide .card .preco {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin-top: -15px;
+
+}
+
+.cards_slide .card .preco .meses {
+  width: 70%;
+  background-color: #d4d3d2;
+  padding: 7px 15px;
+  margin-top: -10px;
+  margin-bottom: 20px;
+  color: var(--secondary-color);
+  font-weight: bold;
+  border-radius: 7px;
+  text-transform: uppercase;
+  font-size: 0.75rem !important;
+
+}
+
+.cards_slide .card .preco .meses span {
+  width: 100%;
+  font-size: 0.65rem;
+  color: var(--primary-color);
+  margin-top: 5px;
+}
+
+.card .preco .info {
+  line-height: 16px;
+  text-align: end;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem !important;
+}
+
+.card .preco .valor {
+  font-size: 4rem;
+  font-weight: bold;
+  color: var(--primary-color);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.389);
+}
+
+.card .preco .valor span {
+  font-size: 1rem;
+}
+
+.card .vemjunto {
+  padding-bottom: 30px;
+}
+
+.card .vemjunto img {
+  width: 20px;
+  height: auto;
+}
+
+.card .vemjunto h4 {
+  width: 100%;
+  line-height: 8px;
+  color: var(--secondary-color);
+  font-size: 1rem;
+  padding: 2px 0;
+}
+
+.card .vemjunto i {
+  color: var(--primary-color) !important;
+}
+
+.card .vemjunto .naovem h4 {
+  width: 100%;
+  line-height: 8px;
+  color: var(--gray);
+  text-decoration: line-through;
+}
+
+.card .vemjunto .naovem i {
+  color: var(--gray) !important;
+}
+
+.swiper-slide {
+  transition: transform 0.3s ease;
+}
+
+.swiper-slide-active {
+  transform: scale(1.02);
+}
+
+
+/* =============================================
+   1366px — tela de notebook/monitor 17"
+   Reduz proporcionalmente para caber na view
+   ============================================= */
+@media (max-width: 1500px) and (min-width: 1024px) {
+
+  .main_card_planos header {
+    padding: 30px 25px;
+  }
+
+  .main_card_planos header h1 {
+    font-size: 3.2rem;
+    margin-bottom: 10px;
+  }
+
+  .main_card_planos header h2 {
+    font-size: 1rem;
+    margin-bottom: 0;
+  }
+
+  /* Reduz todos os textos do card proporcionalmente */
+  .cards_slide .card .card-title {
+    font-size: 0.82rem;
+  }
+
+  .card .preco .valor {
+    font-size: 2.8rem;
+  }
+
+  .cards_slide .card .preco .meses {
+    font-size: 0.65rem !important;
+    padding: 5px 10px;
+    margin-bottom: 10px;
+  }
+
+  .card .vemjunto h4 {
+    font-size: 0.78rem;
+
+  }
+
+  .card .vemjunto {
+    padding-bottom: 12px;
+  }
+
+  .card-img-top {
+    /* Reduz a imagem do topo do card para não consumir muito espaço vertical */
+    max-height: 100px;
+    object-fit: cover;
+  }
+
+  .btn-primary {
+    padding: 7px 14px;
+    font-size: 0.82rem;
+  }
+}
+
+
+/* =============================================
+   MOBILE / TABLET — abaixo de 1024px
+   Empilha header + swiper verticalmente
+   ============================================= */
+@media (max-width: 1023px) {
+
+  .main_card_planos {
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    overflow: hidden;
+  }
+
+  .main_card_planos header {
+    flex-basis: auto;
+    min-height: unset;
+    padding: 25px 20px 12px;
+  }
+
+  .main_card_planos header h1 {
+    font-size: 1.8rem;
+    margin-bottom: 6px;
+  }
+
+  .main_card_planos header h2 {
+    font-size: 0.95rem;
+    margin-bottom: 0;
+  }
+
+  .cards_slide {
+    flex-basis: auto;
+    width: 100%;
+    margin: 0 10px 0 10px;
+  }
+
+  .card-img-top {
+    max-height: 120px;
+    object-fit: cover;
+  }
+
+  .card .preco .valor {
+    font-size: 2.8rem;
+  }
+
+  .card .vemjunto h4 {
+    font-size: 0.85rem;
+    line-height: 8px;
+    padding: 3px 0;
+  }
+
+  .card .vemjunto {
+    padding-bottom: 15px;
+  }
+
+  .cards_slide .card .preco .meses {
+    font-size: 0.65rem !important;
+    padding: 5px 10px;
+    margin-bottom: 12px;
+  }
+}
